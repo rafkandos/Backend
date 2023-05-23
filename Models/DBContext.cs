@@ -17,7 +17,11 @@ public class CualiVyContext : DbContext
         modelBuilder.Entity<User>()
             .HasKey(u => u.guid);
 
-        // Other entity configurations...
+        // modelBuilder.Entity<JobDetail>()
+        //     .HasKey(u => u.guid);
+
+        modelBuilder.Entity<Job>()
+            .HasKey(u => u.guid);
 
         base.OnModelCreating(modelBuilder);
     }
@@ -28,4 +32,5 @@ public class CualiVyContext : DbContext
     }
 
     public DbSet<User> User { get; set; }
+    public DbSet<Job> Job { get; set; }
 }

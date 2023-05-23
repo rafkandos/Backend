@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "SFBfpIYof1/OX4KMxA3P/HGFfTTAetIZHz7j/cXtuQz3xycC7aooBgSRwsxrVH/z3eKgbXBGrhbvepw4qccy5w==",
+  "dgSpecHash": "xcWzX4sd5WhFbvDA57BpbbvSZ6e4yShUtspum0d0kEdNBpn+W7togX5+3BCmUP7WRXgefxVfs6taDRMpCH75Zg==",
   "success": true,
   "projectFilePath": "D:\\BANGKIT\\CAPSTONE\\CualiVy-CC\\CualiVy-CC.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\raffli.firmansyah\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\raffli.firmansyah\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\raffli.firmansyah\\.nuget\\packages\\google.protobuf\\3.21.9\\google.protobuf.3.21.9.nupkg.sha512",
     "C:\\Users\\raffli.firmansyah\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
@@ -24,7 +25,7 @@
     "C:\\Users\\raffli.firmansyah\\.nuget\\packages\\microsoft.aspnetcore.http.extensions\\2.2.0\\microsoft.aspnetcore.http.extensions.2.2.0.nupkg.sha512",
     "C:\\Users\\raffli.firmansyah\\.nuget\\packages\\microsoft.aspnetcore.http.features\\2.2.0\\microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512",
     "C:\\Users\\raffli.firmansyah\\.nuget\\packages\\microsoft.aspnetcore.webutilities\\2.2.0\\microsoft.aspnetcore.webutilities.2.2.0.nupkg.sha512",
-    "C:\\Users\\raffli.firmansyah\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
+    "C:\\Users\\raffli.firmansyah\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\raffli.firmansyah\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.5\\microsoft.entityframeworkcore.7.0.5.nupkg.sha512",
     "C:\\Users\\raffli.firmansyah\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\7.0.5\\microsoft.entityframeworkcore.abstractions.7.0.5.nupkg.sha512",
     "C:\\Users\\raffli.firmansyah\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\7.0.5\\microsoft.entityframeworkcore.analyzers.7.0.5.nupkg.sha512",
