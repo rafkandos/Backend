@@ -24,6 +24,7 @@ public class Job
 public class JobMapping
 {
     public Guid guid { get; set; }
+    public string position { get; set; }
     public string companyname { get; set; }
     public string location { get; set; }
     public string notes { get; set; }
