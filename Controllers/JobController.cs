@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace CualiVy_CC.Controllers;
 
-[Authorize]
+//[Authorize]
 [ApiController]
 [Route("api/[controller]")]
 public class JobController : ControllerBase
@@ -69,66 +69,24 @@ public class JobController : ControllerBase
 
         listData = _context.Job.FromSqlRaw(sqlQuery).ToList();
 
-        // var newList = new List<Job>();
-        // for (int i = 0; i < search.skills.Length; i++)
-        // {
-        //     newList.AddRange(listData.Where(e => search.skills[i].Contains(e.skills)).ToList());
-        // }
+        var config = new MapperConfiguration(cfg => cfg.CreateMap<Job, JobMapping>());
+        var mapper = new Mapper(config);
+        List<JobMapping> listJob = mapper.Map<List<JobMapping>>(listData);
 
-        // newList = newList.Distinct().ToList();
+        rtn.totalData = listJob.Count;
+        rtn.data = listJob;
+        return rtn;
+    }
 
-        // var byExp = _context.Job.Where(e => search.experience.Contains(e.position)).ToList();
-        // var byEdu = _context.Job.Where(e => search.education.Contains(e.education)).ToList();
-        // var byLoc = _context.Job.Where(e => search.location.Contains(e.location)).ToList();
-        // var byMajor = _context.Job.Where(e => search.major.Contains(e.major)).ToList();
+    [HttpGet("get10")]
+    public async Task<ActionResult<ReturnAPI>> GetSample()
+    {
+        var rtn = new ReturnAPI();
+        var listData = new List<Job>();
 
-        // var bySkills = _context.Job.ToList()
-        //                 .AsEnumerable()
-        //                 .Where(e => search.skills.Any(x => e.skills.Contains(x)))
-        //                 .ToList();
-        // // var bySkills = new List<Job>();
-        // // for (int i = 0; i < search.skills.Length; i++)
-        // // {
-        // //     bySkills.AddRange(_context.Job.Where(e => search.skills[i].Contains(e.skills)).ToList());
-        // // }
+        string sqlQuery = "SELECT * FROM Job LIMIT 10";
 
-        // var byMinYears = _context.Job.Where(e => e.minimumyears >= search.minimumyears).ToList();
-
-        // listData.AddRange(byExp);
-        // listData.AddRange(byEdu);
-        // listData.AddRange(byLoc);
-        // listData.AddRange(byMajor);
-        // listData.AddRange(bySkills);
-        // listData.AddRange(byMinYears);
-
-        // listData = listData.Distinct().ToList();
-
-        // List<Job> newList = new List<Job>();
-        // foreach (var i in listData)
-        // {
-        //     if (search.skills.Contains(i.skills))
-        //     {
-        //         if (search.education.Contains(i.education))
-        //         {
-        //             newList.Add(i);
-        //         }
-        //     }
-        //     // if (search.experience.Contains(i.position))
-        //     // {
-        //     //     if (search.education.Contains(i.education))
-        //     //     {
-        //     //         newList.Add(i);
-        //     //         // if (search.skills.Contains(i.skills))
-        //     //         // {
-        //     //         //     newList.Add(i);
-        //     //         // }
-        //     //         // else if (search.location.Contains(i.location))
-        //     //         // {
-        //     //         //     newList.Add(i);
-        //     //         // }
-        //     //     }
-        //     // }
-        // }
+        listData = _context.Job.FromSqlRaw(sqlQuery).ToList();
 
         var config = new MapperConfiguration(cfg => cfg.CreateMap<Job, JobMapping>());
         var mapper = new Mapper(config);
@@ -136,6 +94,22 @@ public class JobController : ControllerBase
 
         rtn.totalData = listJob.Count;
         rtn.data = listJob;
+        return rtn;
+    }
+
+    [HttpPost("Detail")]
+    [Consumes("application/x-www-form-urlencoded")]
+    public async Task<ActionResult<ReturnAPI>> Detail([FromForm] Detail det)
+    {
+        var rtn = new ReturnAPI();
+        var dt = new Job();
+
+        string sqlQuery = "SELECT * FROM Job WHERE guid = '" + det.guid + "'";
+
+        dt = _context.Job.FromSqlRaw(sqlQuery).FirstOrDefault();
+
+        //rtn.totalData = listJob.Count;
+        rtn.data = dt;
         return rtn;
     }
 }

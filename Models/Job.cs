@@ -40,3 +40,8 @@ public class Search
     public string[] skills { get; set; }
     public int minimumyears { get; set; }
 }
+
+public class Detail
+{
+    public string guid { get; set; }
+}
