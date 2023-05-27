@@ -1,26 +1,29 @@
 {
   "format": 1,
   "restore": {
-    "D:\\BANGKIT\\CAPSTONE\\CualiVy-CC\\CualiVy-CC.csproj": {}
+    "E:\\BANGKIT\\CualiVy-CC\\CualiVy-CC.csproj": {}
   },
   "projects": {
-    "D:\\BANGKIT\\CAPSTONE\\CualiVy-CC\\CualiVy-CC.csproj": {
+    "E:\\BANGKIT\\CualiVy-CC\\CualiVy-CC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\BANGKIT\\CAPSTONE\\CualiVy-CC\\CualiVy-CC.csproj",
+        "projectUniqueName": "E:\\BANGKIT\\CualiVy-CC\\CualiVy-CC.csproj",
         "projectName": "CualiVy-CC",
-        "projectPath": "D:\\BANGKIT\\CAPSTONE\\CualiVy-CC\\CualiVy-CC.csproj",
-        "packagesPath": "C:\\Users\\raffli.firmansyah\\.nuget\\packages\\",
-        "outputPath": "D:\\BANGKIT\\CAPSTONE\\CualiVy-CC\\obj\\",
+        "projectPath": "E:\\BANGKIT\\CualiVy-CC\\CualiVy-CC.csproj",
+        "packagesPath": "C:\\Users\\raffl\\.nuget\\packages\\",
+        "outputPath": "E:\\BANGKIT\\CualiVy-CC\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\raffli.firmansyah\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\raffl\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "https://api.nuget.org/v3/index.json": {}
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.devexpress.com/GV5blpmOCtS2CCcpdxfcSSQirfpB9yfpGfocWKGq8UtfwRUtNL/api": {}
         },
         "frameworks": {
           "net6.0": {
