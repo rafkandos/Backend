@@ -1,0 +1,1 @@
+{"ContentRoots":["D:\\BANGKIT\\CAPSTONE\\CualiVy-CC\\wwwroot\\"],"Root":{"Children":{"model1.onnx":{"Children":null,"Asset":{"ContentRootIndex":0,"SubPath":"model1.onnx"},"Patterns":null},"modelcv.onnx":{"Children":null,"Asset":{"ContentRootIndex":0,"SubPath":"modelcv.onnx"},"Patterns":null}},"Asset":null,"Patterns":[{"ContentRootIndex":0,"Pattern":"**","Depth":0}]}}

@@ -29,6 +29,7 @@ public class JobMapping
     public string location { get; set; }
     public string notes { get; set; }
     public string thirdparty { get; set; }
+    public string image { get; set; }
 }
 
 public class Search
@@ -39,4 +40,14 @@ public class Search
     public string[] major { get; set; }
     public string[] skills { get; set; }
     public int minimumyears { get; set; }
+}
+
+public class Detail
+{
+    public string guid { get; set; }
+}
+
+public class SearchJob
+{
+    public string image { get; set; }
 }

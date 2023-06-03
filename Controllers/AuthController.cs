@@ -21,18 +21,19 @@ public class AuthController : ControllerBase
         _configuration = configuration;
     }
 
-    [HttpGet("GetUsers")]
-    public async Task<ActionResult<ReturnAPI>> Get()
-    {
-        var rtn = new ReturnAPI();
-        var listData = _context.User.ToList();
+    // [HttpGet("GetUsers")]
+    // public async Task<ActionResult<ReturnAPI>> Get()
+    // {
+    //     var rtn = new ReturnAPI();
+    //     var listData = _context.User.ToList();
 
-        rtn.data = listData;
-        return rtn;
-    }
+    //     rtn.data = listData;
+    //     return rtn;
+    // }
 
     [HttpPost("register")]
-    public async Task<ActionResult<ReturnAPI>> Register(User user)
+    [Consumes("application/x-www-form-urlencoded")]
+    public async Task<ActionResult<ReturnAPI>> Register([FromForm] Register user)
     {
         var rtn = new ReturnAPI();
         try
@@ -65,7 +66,8 @@ public class AuthController : ControllerBase
     }
 
     [HttpPost("login")]
-    public async Task<ActionResult<ReturnAPI>> Login(Login login)
+    [Consumes("application/x-www-form-urlencoded")]
+    public async Task<ActionResult<ReturnAPI>> Login([FromForm] Login login)
     {
         var rtn = new ReturnAPI();
         try
