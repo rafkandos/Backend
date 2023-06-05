@@ -38,9 +38,9 @@ public class JobController : ControllerBase
         _session = new InferenceSession(modelFilePath);
     }
 
-    [HttpPost("TestModel")]
+    [HttpPost("SearchJob")]
     [Consumes("application/x-www-form-urlencoded")]
-    public async Task<ActionResult<ReturnAPI>> TestModel([FromForm] string input)
+    public async Task<ActionResult<ReturnAPI>> SearchJob([FromForm] string input)
     {
         var extractedText = _ocrService.GetExtractedText(input);
 
@@ -171,44 +171,44 @@ public class JobController : ControllerBase
         return rtn;
     }
 
-    [HttpPost("search")]
-    public async Task<ActionResult<ReturnAPI>> Post(Search search)
-    {
-        var rtn = new ReturnAPI();
-        var listData = new List<Job>();
+    // [HttpPost("search")]
+    // public async Task<ActionResult<ReturnAPI>> Post(Search search)
+    // {
+    //     var rtn = new ReturnAPI();
+    //     var listData = new List<Job>();
 
-        string sqlQuery = "SELECT *, CONCAT('') AS image FROM Job WHERE guid = '' ";
+    //     string sqlQuery = "SELECT *, CONCAT('') AS image FROM Job WHERE guid = '' ";
 
-        if (search.skills.Length > 0)
-        {
-            for (int i = 0; i < search.skills.Length; i++)
-            {
-                sqlQuery += "OR skills LIKE '%" + search.skills[i] + "%' ";
-            }
-        }
+    //     if (search.skills.Length > 0)
+    //     {
+    //         for (int i = 0; i < search.skills.Length; i++)
+    //         {
+    //             sqlQuery += "OR skills LIKE '%" + search.skills[i] + "%' ";
+    //         }
+    //     }
 
-        if (search.experience.Length > 0)
-        {
-            for (int i = 0; i < search.experience.Length; i++)
-            {
-                string[] divExp = search.experience[i].Split(' ');
-                for (int j = 0; j < divExp.Length; j++)
-                {
-                    sqlQuery += "OR position LIKE '%" + divExp[i] + "%' ";
-                }
-            }
-        }
+    //     if (search.experience.Length > 0)
+    //     {
+    //         for (int i = 0; i < search.experience.Length; i++)
+    //         {
+    //             string[] divExp = search.experience[i].Split(' ');
+    //             for (int j = 0; j < divExp.Length; j++)
+    //             {
+    //                 sqlQuery += "OR position LIKE '%" + divExp[i] + "%' ";
+    //             }
+    //         }
+    //     }
 
-        listData = _context.Job.FromSqlRaw(sqlQuery).ToList();
+    //     listData = _context.Job.FromSqlRaw(sqlQuery).ToList();
 
-        var config = new MapperConfiguration(cfg => cfg.CreateMap<Job, JobMapping>());
-        var mapper = new Mapper(config);
-        List<JobMapping> listJob = mapper.Map<List<JobMapping>>(listData);
+    //     var config = new MapperConfiguration(cfg => cfg.CreateMap<Job, JobMapping>());
+    //     var mapper = new Mapper(config);
+    //     List<JobMapping> listJob = mapper.Map<List<JobMapping>>(listData);
 
-        rtn.totalData = listJob.Count;
-        rtn.data = listJob;
-        return rtn;
-    }
+    //     rtn.totalData = listJob.Count;
+    //     rtn.data = listJob;
+    //     return rtn;
+    // }
 
     [HttpGet("get10")]
     public async Task<ActionResult<ReturnAPI>> GetSample()
