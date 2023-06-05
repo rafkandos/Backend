@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "KPLezJbqG25YClYZOmONMuAB7/BEGQAL9YpuWriOY6E=",
+  "Hash": "d5BPQ9IyOvgH2jByuZPtY3RYtadX31lswq1t4pZeP1A=",
   "Source": "CualiVy-CC",
   "BasePath": "_content/CualiVy-CC",
   "Mode": "Default",
@@ -17,12 +17,12 @@
   ],
   "Assets": [
     {
-      "Identity": "D:\\BANGKIT\\CAPSTONE\\CualiVy-CC\\wwwroot\\model1.onnx",
+      "Identity": "D:\\BANGKIT\\CAPSTONE\\CualiVy-CC\\wwwroot\\model_1.onnx",
       "SourceId": "CualiVy-CC",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\BANGKIT\\CAPSTONE\\CualiVy-CC\\wwwroot\\",
       "BasePath": "_content/CualiVy-CC",
-      "RelativePath": "model1.onnx",
+      "RelativePath": "model_1.onnx",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -31,7 +31,24 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\model1.onnx"
+      "OriginalItemSpec": "wwwroot\\model_1.onnx"
+    },
+    {
+      "Identity": "D:\\BANGKIT\\CAPSTONE\\CualiVy-CC\\wwwroot\\model_2.onnx",
+      "SourceId": "CualiVy-CC",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\BANGKIT\\CAPSTONE\\CualiVy-CC\\wwwroot\\",
+      "BasePath": "_content/CualiVy-CC",
+      "RelativePath": "model_2.onnx",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\model_2.onnx"
     },
     {
       "Identity": "D:\\BANGKIT\\CAPSTONE\\CualiVy-CC\\wwwroot\\modelcv.onnx",
@@ -49,6 +66,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\modelcv.onnx"
+    },
+    {
+      "Identity": "D:\\BANGKIT\\CAPSTONE\\CualiVy-CC\\wwwroot\\modelv2_900.onnx",
+      "SourceId": "CualiVy-CC",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\BANGKIT\\CAPSTONE\\CualiVy-CC\\wwwroot\\",
+      "BasePath": "_content/CualiVy-CC",
+      "RelativePath": "modelv2_900.onnx",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\modelv2_900.onnx"
     }
   ]
 }

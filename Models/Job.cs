@@ -19,6 +19,7 @@ public class Job
     public string link { get; set; }
     public DateTime? createdat { get; set; }
     public DateTime? updatedat { get; set; }
+    public string image { get; set; }
 }
 
 public class JobMapping
@@ -50,4 +51,10 @@ public class Detail
 public class SearchJob
 {
     public string image { get; set; }
+}
+
+public class ResultTestModel
+{
+    public string[] cat { get; set; }
+    public object All { get; set; }
 }
