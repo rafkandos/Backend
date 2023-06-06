@@ -111,7 +111,7 @@ public class JobController : ControllerBase
             "react js developer",
             "cyber security",
             "sql developer",
-            "machine learning developer",
+            "machine learning",
             "android developer",
             "python developer",
             "web developer"
