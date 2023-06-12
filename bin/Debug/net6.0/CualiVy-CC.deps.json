@@ -20,7 +20,7 @@
           "Swashbuckle.AspNetCore": "6.2.3",
           "System.Drawing.Common": "7.0.0",
           "System.Reflection.Emit": "4.7.0",
-          "Tesseract": "5.2.0"
+          "Tesseract": "4.1.1"
         },
         "runtime": {
           "CualiVy-CC.dll": {}
@@ -453,7 +453,7 @@
           "runtimes/win-arm/native/onnxruntime.dll": {
             "rid": "win-arm",
             "assetType": "native",
-            "fileVersion": "1.9.21.921"
+            "fileVersion": "0.0.0.0"
           },
           "runtimes/win-arm/native/onnxruntime.lib": {
             "rid": "win-arm",
@@ -473,7 +473,7 @@
           "runtimes/win-arm64/native/onnxruntime.dll": {
             "rid": "win-arm64",
             "assetType": "native",
-            "fileVersion": "1.9.21.921"
+            "fileVersion": "0.0.0.0"
           },
           "runtimes/win-arm64/native/onnxruntime.lib": {
             "rid": "win-arm64",
@@ -493,7 +493,7 @@
           "runtimes/win-x64/native/onnxruntime.dll": {
             "rid": "win-x64",
             "assetType": "native",
-            "fileVersion": "1.9.21.921"
+            "fileVersion": "0.0.0.0"
           },
           "runtimes/win-x64/native/onnxruntime.lib": {
             "rid": "win-x64",
@@ -513,7 +513,7 @@
           "runtimes/win-x86/native/onnxruntime.dll": {
             "rid": "win-x86",
             "assetType": "native",
-            "fileVersion": "1.9.21.921"
+            "fileVersion": "0.0.0.0"
           },
           "runtimes/win-x86/native/onnxruntime.lib": {
             "rid": "win-x86",
@@ -616,27 +616,27 @@
           "runtimes/win-x64/native/comerr64.dll": {
             "rid": "win-x64",
             "assetType": "native",
-            "fileVersion": "4.1.0.0"
+            "fileVersion": "0.0.0.0"
           },
           "runtimes/win-x64/native/gssapi64.dll": {
             "rid": "win-x64",
             "assetType": "native",
-            "fileVersion": "4.1.0.0"
+            "fileVersion": "0.0.0.0"
           },
           "runtimes/win-x64/native/k5sprt64.dll": {
             "rid": "win-x64",
             "assetType": "native",
-            "fileVersion": "4.1.0.0"
+            "fileVersion": "0.0.0.0"
           },
           "runtimes/win-x64/native/krb5_64.dll": {
             "rid": "win-x64",
             "assetType": "native",
-            "fileVersion": "4.1.0.0"
+            "fileVersion": "0.0.0.0"
           },
           "runtimes/win-x64/native/krbcc64.dll": {
             "rid": "win-x64",
             "assetType": "native",
-            "fileVersion": "4.1.0.0"
+            "fileVersion": "0.0.0.0"
           }
         }
       },
@@ -924,14 +924,14 @@
           }
         }
       },
-      "Tesseract/5.2.0": {
+      "Tesseract/4.1.1": {
         "dependencies": {
           "System.Reflection.Emit": "4.7.0"
         },
         "runtime": {
           "lib/netstandard2.0/Tesseract.dll": {
-            "assemblyVersion": "5.2.0.0",
-            "fileVersion": "5.2.0.0"
+            "assemblyVersion": "4.1.1.0",
+            "fileVersion": "4.1.1.0"
           }
         }
       }
@@ -1594,12 +1594,12 @@
       "path": "system.windows.extensions/4.7.0",
       "hashPath": "system.windows.extensions.4.7.0.nupkg.sha512"
     },
-    "Tesseract/5.2.0": {
+    "Tesseract/4.1.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-YB7feJlrTWSXtK8+WaCcseGSPK/1r2d2FWeKGyndlrPwYClrzTlCoHD4/oQEUjKafmpkWlhTZZ7pxiRJYZgj6w==",
-      "path": "tesseract/5.2.0",
-      "hashPath": "tesseract.5.2.0.nupkg.sha512"
+      "sha512": "sha512-abufaW6N3P7TGJPI3RNTMSzS1ycnE1w6aW/Q+Hco/wCgm+bXUgR87JsGELvTcm2FISXGlQgs+PvYMVo9SlcPfg==",
+      "path": "tesseract/4.1.1",
+      "hashPath": "tesseract.4.1.1.nupkg.sha512"
     }
   }
 }

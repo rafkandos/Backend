@@ -1,0 +1,37 @@
+{
+  "Files": [
+    {
+      "Id": "/home/c097dsx1393/CualiVy-CC/wwwroot/model_1.onnx",
+      "PackagePath": "staticwebassets/model_1.onnx"
+    },
+    {
+      "Id": "/home/c097dsx1393/CualiVy-CC/wwwroot/model_2.onnx",
+      "PackagePath": "staticwebassets/model_2.onnx"
+    },
+    {
+      "Id": "/home/c097dsx1393/CualiVy-CC/wwwroot/modelcv.onnx",
+      "PackagePath": "staticwebassets/modelcv.onnx"
+    },
+    {
+      "Id": "/home/c097dsx1393/CualiVy-CC/wwwroot/modelv2_900.onnx",
+      "PackagePath": "staticwebassets/modelv2_900.onnx"
+    },
+    {
+      "Id": "obj/Debug/net6.0/staticwebassets/msbuild.CualiVy-CC.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj/Debug/net6.0/staticwebassets/msbuild.build.CualiVy-CC.props",
+      "PackagePath": "build\\CualiVy-CC.props"
+    },
+    {
+      "Id": "obj/Debug/net6.0/staticwebassets/msbuild.buildMultiTargeting.CualiVy-CC.props",
+      "PackagePath": "buildMultiTargeting\\CualiVy-CC.props"
+    },
+    {
+      "Id": "obj/Debug/net6.0/staticwebassets/msbuild.buildTransitive.CualiVy-CC.props",
+      "PackagePath": "buildTransitive\\CualiVy-CC.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

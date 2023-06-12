@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "d5BPQ9IyOvgH2jByuZPtY3RYtadX31lswq1t4pZeP1A=",
+  "Hash": "fBH3IkYAfP/WpUKHguxGWvyouHT/eo/xYFezgUg4uEY=",
   "Source": "CualiVy-CC",
   "BasePath": "_content/CualiVy-CC",
   "Mode": "Default",
@@ -8,19 +8,19 @@
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [
     {
-      "Name": "CualiVy-CC\\wwwroot",
+      "Name": "CualiVy-CC/wwwroot",
       "Source": "CualiVy-CC",
-      "ContentRoot": "D:\\BANGKIT\\CAPSTONE\\CualiVy-CC\\wwwroot\\",
+      "ContentRoot": "/home/c097dsx1393/CualiVy-CC/wwwroot/",
       "BasePath": "_content/CualiVy-CC",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "D:\\BANGKIT\\CAPSTONE\\CualiVy-CC\\wwwroot\\model_1.onnx",
+      "Identity": "/home/c097dsx1393/CualiVy-CC/wwwroot/model_1.onnx",
       "SourceId": "CualiVy-CC",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BANGKIT\\CAPSTONE\\CualiVy-CC\\wwwroot\\",
+      "ContentRoot": "/home/c097dsx1393/CualiVy-CC/wwwroot/",
       "BasePath": "_content/CualiVy-CC",
       "RelativePath": "model_1.onnx",
       "AssetKind": "All",
@@ -31,13 +31,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\model_1.onnx"
+      "OriginalItemSpec": "wwwroot/model_1.onnx"
     },
     {
-      "Identity": "D:\\BANGKIT\\CAPSTONE\\CualiVy-CC\\wwwroot\\model_2.onnx",
+      "Identity": "/home/c097dsx1393/CualiVy-CC/wwwroot/model_2.onnx",
       "SourceId": "CualiVy-CC",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BANGKIT\\CAPSTONE\\CualiVy-CC\\wwwroot\\",
+      "ContentRoot": "/home/c097dsx1393/CualiVy-CC/wwwroot/",
       "BasePath": "_content/CualiVy-CC",
       "RelativePath": "model_2.onnx",
       "AssetKind": "All",
@@ -48,13 +48,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\model_2.onnx"
+      "OriginalItemSpec": "wwwroot/model_2.onnx"
     },
     {
-      "Identity": "D:\\BANGKIT\\CAPSTONE\\CualiVy-CC\\wwwroot\\modelcv.onnx",
+      "Identity": "/home/c097dsx1393/CualiVy-CC/wwwroot/modelcv.onnx",
       "SourceId": "CualiVy-CC",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BANGKIT\\CAPSTONE\\CualiVy-CC\\wwwroot\\",
+      "ContentRoot": "/home/c097dsx1393/CualiVy-CC/wwwroot/",
       "BasePath": "_content/CualiVy-CC",
       "RelativePath": "modelcv.onnx",
       "AssetKind": "All",
@@ -65,13 +65,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\modelcv.onnx"
+      "OriginalItemSpec": "wwwroot/modelcv.onnx"
     },
     {
-      "Identity": "D:\\BANGKIT\\CAPSTONE\\CualiVy-CC\\wwwroot\\modelv2_900.onnx",
+      "Identity": "/home/c097dsx1393/CualiVy-CC/wwwroot/modelv2_900.onnx",
       "SourceId": "CualiVy-CC",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BANGKIT\\CAPSTONE\\CualiVy-CC\\wwwroot\\",
+      "ContentRoot": "/home/c097dsx1393/CualiVy-CC/wwwroot/",
       "BasePath": "_content/CualiVy-CC",
       "RelativePath": "modelv2_900.onnx",
       "AssetKind": "All",
@@ -82,7 +82,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\modelv2_900.onnx"
+      "OriginalItemSpec": "wwwroot/modelv2_900.onnx"
     }
   ]
 }

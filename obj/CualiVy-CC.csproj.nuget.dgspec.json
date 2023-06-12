@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\BANGKIT\\CAPSTONE\\CualiVy-CC\\CualiVy-CC.csproj": {}
+    "/home/c097dsx1393/CualiVy-CC/CualiVy-CC.csproj": {}
   },
   "projects": {
-    "D:\\BANGKIT\\CAPSTONE\\CualiVy-CC\\CualiVy-CC.csproj": {
+    "/home/c097dsx1393/CualiVy-CC/CualiVy-CC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\BANGKIT\\CAPSTONE\\CualiVy-CC\\CualiVy-CC.csproj",
+        "projectUniqueName": "/home/c097dsx1393/CualiVy-CC/CualiVy-CC.csproj",
         "projectName": "CualiVy-CC",
-        "projectPath": "D:\\BANGKIT\\CAPSTONE\\CualiVy-CC\\CualiVy-CC.csproj",
-        "packagesPath": "C:\\Users\\raffli.firmansyah\\.nuget\\packages\\",
-        "outputPath": "D:\\BANGKIT\\CAPSTONE\\CualiVy-CC\\obj\\",
+        "projectPath": "/home/c097dsx1393/CualiVy-CC/CualiVy-CC.csproj",
+        "packagesPath": "/home/c097dsx1393/.nuget/packages/",
+        "outputPath": "/home/c097dsx1393/CualiVy-CC/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\raffli.firmansyah\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/home/c097dsx1393/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -92,7 +92,7 @@
             },
             "Tesseract": {
               "target": "Package",
-              "version": "[5.2.0, )"
+              "version": "[4.1.0, )"
             }
           },
           "imports": [
@@ -101,7 +101,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -113,7 +114,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/7.0.203/RuntimeIdentifierGraph.json"
         }
       }
     }

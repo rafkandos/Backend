@@ -1,0 +1,88 @@
+{
+  "Version": 1,
+  "Hash": "wkWoZEVsGK2KfP3pvJ7xdBA5aQS5YFHeybzO7v6ViFA=",
+  "Source": "CualiVy-CC",
+  "BasePath": "_content/CualiVy-CC",
+  "Mode": "Default",
+  "ManifestType": "Publish",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "CualiVy-CC/wwwroot",
+      "Source": "CualiVy-CC",
+      "ContentRoot": "/home/c097dsx1393/CualiVy-CC/wwwroot/",
+      "BasePath": "_content/CualiVy-CC",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "/home/c097dsx1393/CualiVy-CC/wwwroot/model_1.onnx",
+      "SourceId": "CualiVy-CC",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/c097dsx1393/CualiVy-CC/wwwroot/",
+      "BasePath": "_content/CualiVy-CC",
+      "RelativePath": "model_1.onnx",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/model_1.onnx"
+    },
+    {
+      "Identity": "/home/c097dsx1393/CualiVy-CC/wwwroot/model_2.onnx",
+      "SourceId": "CualiVy-CC",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/c097dsx1393/CualiVy-CC/wwwroot/",
+      "BasePath": "_content/CualiVy-CC",
+      "RelativePath": "model_2.onnx",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/model_2.onnx"
+    },
+    {
+      "Identity": "/home/c097dsx1393/CualiVy-CC/wwwroot/modelcv.onnx",
+      "SourceId": "CualiVy-CC",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/c097dsx1393/CualiVy-CC/wwwroot/",
+      "BasePath": "_content/CualiVy-CC",
+      "RelativePath": "modelcv.onnx",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/modelcv.onnx"
+    },
+    {
+      "Identity": "/home/c097dsx1393/CualiVy-CC/wwwroot/modelv2_900.onnx",
+      "SourceId": "CualiVy-CC",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/c097dsx1393/CualiVy-CC/wwwroot/",
+      "BasePath": "_content/CualiVy-CC",
+      "RelativePath": "modelv2_900.onnx",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/modelv2_900.onnx"
+    }
+  ]
+}
