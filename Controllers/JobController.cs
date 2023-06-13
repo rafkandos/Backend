@@ -42,57 +42,58 @@ public class JobController : ControllerBase
     [Consumes("application/x-www-form-urlencoded")]
     public async Task<ActionResult<ReturnAPI>> SearchJob([FromForm] string input)
     {
-        var extractedText = _ocrService.GetExtractedText(input);
-
-        // Convert the input string to a byte array
-        byte[] textToByte = System.Text.Encoding.UTF8.GetBytes(extractedText);
-
-        int length = 900;
-        byte[] inputData = new byte[length];
-
-        // Masking byte length
-        if (textToByte.Length > length)
+        try
         {
-            Array.Copy(textToByte, inputData, length);
-        }
-        else
-        {
-            Array.Copy(textToByte, inputData, textToByte.Length);
-        }
+            var extractedText = _ocrService.GetExtractedText(input);
+            Console.WriteLine(extractedText);
+            Console.WriteLine("textLength = " + extractedText.Length);
 
-        // Prepare the input tensor
-        string inputName = _session.InputMetadata.Keys.First();
-        int inputSize = inputData.Length;
+            if (extractedText == "") throw new Exception("Unrecognize Resume/CV");
 
-        // Create an array to hold the float values
-        float[] inputFloats = new float[inputSize];
+            // Convert the input string to a byte array
+            byte[] textToByte = System.Text.Encoding.UTF8.GetBytes(extractedText);
+            Console.WriteLine("byteLength = " + textToByte.Length);
 
-        // Convert the byte array to float array
-        for (int i = 0; i < inputSize; i++)
-        {
-            inputFloats[i] = inputData[i];
-        }
+            int length = 900;
+            byte[] inputData = new byte[length];
 
-        // Create the input tensor using the float array
-        var inputTensor = new DenseTensor<float>(inputFloats, new int[] { 1, inputData.Length });
+            // Masking byte length
+            if (textToByte.Length > length) Array.Copy(textToByte, inputData, length);
+            else Array.Copy(textToByte, inputData, textToByte.Length);
 
-        // Create a collection of NamedOnnxValue objects for input
-        var inputs = new List<NamedOnnxValue>
-        {
-            NamedOnnxValue.CreateFromTensor(inputName, inputTensor)
-        };
+            // Prepare the input tensor
+            string inputName = _session.InputMetadata.Keys.First();
+            int inputSize = inputData.Length;
 
-        // Prepare the output names
-        var outputNames = _session.OutputMetadata.Keys.ToList();
+            // Create an array to hold the float values
+            float[] inputFloats = new float[inputSize];
 
-        // Run the model
-        var outputs = _session.Run(inputs);
+            // Convert the byte array to float array
+            for (int i = 0; i < inputSize; i++)
+            {
+                inputFloats[i] = inputData[i];
+            }
 
-        // Get the output tensor as a float array
-        var outputTensor = outputs.First().AsTensor<float>().ToArray();
-        int tes = outputTensor.Length;
+            // Create the input tensor using the float array
+            var inputTensor = new DenseTensor<float>(inputFloats, new int[] { 1, inputData.Length });
 
-        string[] labels = {
+            // Create a collection of NamedOnnxValue objects for input
+            var inputs = new List<NamedOnnxValue>
+            {
+                NamedOnnxValue.CreateFromTensor(inputName, inputTensor)
+            };
+
+            // Prepare the output names
+            var outputNames = _session.OutputMetadata.Keys.ToList();
+
+            // Run the model
+            var outputs = _session.Run(inputs);
+
+            // Get the output tensor as a float array
+            var outputTensor = outputs.First().AsTensor<float>().ToArray();
+            int tes = outputTensor.Length;
+
+            string[] labels = {
             "software engineer",
             "ios developer",
             "database engineer",
@@ -117,58 +118,67 @@ public class JobController : ControllerBase
             "web developer"
         };
 
-        // Mengambil 3 indeks dengan probabilitas tertinggi
-        int[] topIndices = outputTensor
-            .Select((value, index) => new { Value = value, Index = index })
-            .OrderByDescending(item => item.Value)
-            .Take(3)
-            .Select(item => item.Index)
-            .ToArray();
+            // Mengambil 3 indeks dengan probabilitas tertinggi
+            int[] topIndices = outputTensor
+                .Select((value, index) => new { Value = value, Index = index })
+                .OrderByDescending(item => item.Value)
+                .Take(3)
+                .Select(item => item.Index)
+                .ToArray();
 
-        // Mengambil 3 label dengan probabilitas tertinggi
-        string[] topLabels = topIndices.Select(index => labels[index]).ToArray();
+            // Mengambil 3 label dengan probabilitas tertinggi
+            string[] topLabels = topIndices.Select(index => labels[index]).ToArray();
 
-        // Dictionary<string, float> dict = new Dictionary<string, float>();
-        // for (int i = 0; i < outputTensor.Length; i++)
-        // {
-        //     dict.Add(labels[i], outputTensor[i]);
-        // }
+            // Dictionary<string, float> dict = new Dictionary<string, float>();
+            // for (int i = 0; i < outputTensor.Length; i++)
+            // {
+            //     dict.Add(labels[i], outputTensor[i]);
+            // }
 
-        // ResultTestModel res = new ResultTestModel { cat = topLabels, All = dict };
+            // ResultTestModel res = new ResultTestModel { cat = topLabels, All = dict };
 
-        var rtn = new ReturnAPI();
-        var listData = new List<Job>();
+            var rtn = new ReturnAPI();
+            var listData = new List<Job>();
 
-        string sqlQuery = "SELECT *, CONCAT('') AS image FROM Job WHERE guid = '' ";
+            string sqlQuery = "SELECT *, CONCAT('') AS image FROM Job WHERE guid = '' ";
 
-        if (topLabels.Length > 0)
-        {
-            for (int i = 0; i < topLabels.Length; i++)
+            if (topLabels.Length > 0)
             {
-                sqlQuery += "OR POSITION LIKE '%" + topLabels[i] + "%' ";
+                for (int i = 0; i < topLabels.Length; i++)
+                {
+                    sqlQuery += "OR POSITION LIKE '%" + topLabels[i] + "%' ";
+                }
             }
+
+            listData = _context.Job.FromSqlRaw(sqlQuery).ToList();
+
+            List<JobMapping> listJob = new List<JobMapping>();
+            foreach (var i in listData)
+            {
+                JobMapping jm = new JobMapping();
+                jm.guid = i.guid;
+                jm.position = i.position;
+                jm.companyname = i.companyname;
+                jm.location = i.location;
+                jm.notes = i.notes;
+                jm.thirdparty = i.thirdparty;
+                jm.image = _cvService.GetImage(i.thirdparty);
+
+                listJob.Add(jm);
+            }
+
+            rtn.totalData = listJob.Count;
+            rtn.data = listJob;
+            return rtn;
         }
-
-        listData = _context.Job.FromSqlRaw(sqlQuery).ToList();
-
-        List<JobMapping> listJob = new List<JobMapping>();
-        foreach (var i in listData)
+        catch (Exception e)
         {
-            JobMapping jm = new JobMapping();
-            jm.guid = i.guid;
-            jm.position = i.position;
-            jm.companyname = i.companyname;
-            jm.location = i.location;
-            jm.notes = i.notes;
-            jm.thirdparty = i.thirdparty;
-            jm.image = _cvService.GetImage(i.thirdparty);
+            var rtn = new ReturnAPI();
+            rtn.status = 500;
+            rtn.message = e.Message;
 
-            listJob.Add(jm);
+            return StatusCode(500, rtn);
         }
-
-        rtn.totalData = listJob.Count;
-        rtn.data = listJob;
-        return rtn;
     }
 
     // [HttpPost("search")]
