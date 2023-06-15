@@ -47,6 +47,20 @@ proxy_set_header X-Forwarded-Proto $scheme;
 
 Proxy pass is filled with port 5000 because that port is the default for publishing dotnet 6.
 
+## Add Dependencies For Machine Learning Model
+
+Go to that path : ```nano /Cuacllivy-CC/bin/Debug/net6/x64```
+
+Then use command :
+
+```ln -s /usr/lib/x86_64-linux-gnu/liblept.so.5 liblept.so.5```
+
+```ln -s /usr/lib/x86_64-linux-gnu/liblept.so.5 libleptonica-1.78.0.so```
+
+```ln -s /usr/lib/x86_64-linux-gnu/liblept.so.5 libleptonica-1.80.0.so```
+
+```ln -s /usr/lib/x86_64-linux-gnu/libtesseract.so.4.0.1 libtesseract41.so```
+
 ## Publish framework .net
 
 Command : ```dotnet publish -o cualivy```
@@ -104,19 +118,7 @@ Command :
 
 ```sudo systemctl start nama_file.service```
 
-## Add Dependencies For Machine Learning Model
 
-Go to that path : ```nano /Cuacllivy-CC/bin/Debug/net6/x64```
-
-Then use command :
-
-```ln -s /usr/lib/x86_64-linux-gnu/liblept.so.5 liblept.so.5```
-
-```ln -s /usr/lib/x86_64-linux-gnu/liblept.so.5 libleptonica-1.78.0.so```
-
-```ln -s /usr/lib/x86_64-linux-gnu/liblept.so.5 libleptonica-1.80.0.so```
-
-```ln -s /usr/lib/x86_64-linux-gnu/libtesseract.so.4.0.1 libtesseract41.so```
 
 Note : used for dependencies for machine learning model
 
